@@ -1,0 +1,641 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9BAB18C922E780F800BA1D72 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAB18C822E780F800BA1D72 /* Constants.swift */; };
+		9BFBC64A22D5099800652E6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFBC64922D5099800652E6E /* AppDelegate.swift */; };
+		9BFBC64C22D5099800652E6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFBC64B22D5099800652E6E /* SceneDelegate.swift */; };
+		9BFBC64E22D5099800652E6E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFBC64D22D5099800652E6E /* ContentView.swift */; };
+		9BFBC65022D5099900652E6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BFBC64F22D5099900652E6E /* Assets.xcassets */; };
+		9BFBC65322D5099900652E6E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BFBC65222D5099900652E6E /* Preview Assets.xcassets */; };
+		9BFBC65622D5099900652E6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFBC65422D5099900652E6E /* LaunchScreen.storyboard */; };
+		9BFBC66122D5099900652E6E /* WellsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFBC66022D5099900652E6E /* WellsAppTests.swift */; };
+		9BFBC66C22D5099900652E6E /* WellsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFBC66B22D5099900652E6E /* WellsAppUITests.swift */; };
+		9BFBC67A22D5105F00652E6E /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFBC67922D5105F00652E6E /* LocalizedStrings.swift */; };
+		9BFBC67C22D515F500652E6E /* EstimateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFBC67B22D515F500652E6E /* EstimateModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9BFBC65D22D5099900652E6E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BFBC63E22D5099800652E6E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BFBC64522D5099800652E6E;
+			remoteInfo = WellsApp;
+		};
+		9BFBC66822D5099900652E6E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BFBC63E22D5099800652E6E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BFBC64522D5099800652E6E;
+			remoteInfo = WellsApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9BAB18C722E77F5100BA1D72 /* WellsApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WellsApp.entitlements; sourceTree = "<group>"; };
+		9BAB18C822E780F800BA1D72 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9BFBC64622D5099800652E6E /* WellsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WellsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BFBC64922D5099800652E6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9BFBC64B22D5099800652E6E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9BFBC64D22D5099800652E6E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9BFBC64F22D5099900652E6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9BFBC65222D5099900652E6E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9BFBC65522D5099900652E6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9BFBC65722D5099900652E6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BFBC65C22D5099900652E6E /* WellsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WellsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BFBC66022D5099900652E6E /* WellsAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellsAppTests.swift; sourceTree = "<group>"; };
+		9BFBC66222D5099900652E6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BFBC66722D5099900652E6E /* WellsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WellsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BFBC66B22D5099900652E6E /* WellsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellsAppUITests.swift; sourceTree = "<group>"; };
+		9BFBC66D22D5099900652E6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BFBC67922D5105F00652E6E /* LocalizedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
+		9BFBC67B22D515F500652E6E /* EstimateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9BFBC64322D5099800652E6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BFBC65922D5099900652E6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BFBC66422D5099900652E6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9BCB03EF22E77B6300C651D3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9BFBC64D22D5099800652E6E /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9BCB03F022E77B8200C651D3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9BFBC67922D5105F00652E6E /* LocalizedStrings.swift */,
+				9BAB18C822E780F800BA1D72 /* Constants.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9BCB03F122E77B9400C651D3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9BFBC67B22D515F500652E6E /* EstimateModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9BFBC63D22D5099800652E6E = {
+			isa = PBXGroup;
+			children = (
+				9BFBC64822D5099800652E6E /* WellsApp */,
+				9BFBC65F22D5099900652E6E /* WellsAppTests */,
+				9BFBC66A22D5099900652E6E /* WellsAppUITests */,
+				9BFBC64722D5099800652E6E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9BFBC64722D5099800652E6E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9BFBC64622D5099800652E6E /* WellsApp.app */,
+				9BFBC65C22D5099900652E6E /* WellsAppTests.xctest */,
+				9BFBC66722D5099900652E6E /* WellsAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9BFBC64822D5099800652E6E /* WellsApp */ = {
+			isa = PBXGroup;
+			children = (
+				9BAB18C722E77F5100BA1D72 /* WellsApp.entitlements */,
+				9BCB03F022E77B8200C651D3 /* Supporting Files */,
+				9BCB03F122E77B9400C651D3 /* Models */,
+				9BCB03EF22E77B6300C651D3 /* Views */,
+				9BFBC64922D5099800652E6E /* AppDelegate.swift */,
+				9BFBC64B22D5099800652E6E /* SceneDelegate.swift */,
+				9BFBC64F22D5099900652E6E /* Assets.xcassets */,
+				9BFBC65422D5099900652E6E /* LaunchScreen.storyboard */,
+				9BFBC65722D5099900652E6E /* Info.plist */,
+				9BFBC65122D5099900652E6E /* Preview Content */,
+			);
+			path = WellsApp;
+			sourceTree = "<group>";
+		};
+		9BFBC65122D5099900652E6E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				9BFBC65222D5099900652E6E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9BFBC65F22D5099900652E6E /* WellsAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				9BFBC66022D5099900652E6E /* WellsAppTests.swift */,
+				9BFBC66222D5099900652E6E /* Info.plist */,
+			);
+			path = WellsAppTests;
+			sourceTree = "<group>";
+		};
+		9BFBC66A22D5099900652E6E /* WellsAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9BFBC66B22D5099900652E6E /* WellsAppUITests.swift */,
+				9BFBC66D22D5099900652E6E /* Info.plist */,
+			);
+			path = WellsAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9BFBC64522D5099800652E6E /* WellsApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BFBC67022D5099900652E6E /* Build configuration list for PBXNativeTarget "WellsApp" */;
+			buildPhases = (
+				9BFBC64222D5099800652E6E /* Sources */,
+				9BFBC64322D5099800652E6E /* Frameworks */,
+				9BFBC64422D5099800652E6E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WellsApp;
+			productName = WellsApp;
+			productReference = 9BFBC64622D5099800652E6E /* WellsApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9BFBC65B22D5099900652E6E /* WellsAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BFBC67322D5099900652E6E /* Build configuration list for PBXNativeTarget "WellsAppTests" */;
+			buildPhases = (
+				9BFBC65822D5099900652E6E /* Sources */,
+				9BFBC65922D5099900652E6E /* Frameworks */,
+				9BFBC65A22D5099900652E6E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9BFBC65E22D5099900652E6E /* PBXTargetDependency */,
+			);
+			name = WellsAppTests;
+			productName = WellsAppTests;
+			productReference = 9BFBC65C22D5099900652E6E /* WellsAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9BFBC66622D5099900652E6E /* WellsAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BFBC67622D5099900652E6E /* Build configuration list for PBXNativeTarget "WellsAppUITests" */;
+			buildPhases = (
+				9BFBC66322D5099900652E6E /* Sources */,
+				9BFBC66422D5099900652E6E /* Frameworks */,
+				9BFBC66522D5099900652E6E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9BFBC66922D5099900652E6E /* PBXTargetDependency */,
+			);
+			name = WellsAppUITests;
+			productName = WellsAppUITests;
+			productReference = 9BFBC66722D5099900652E6E /* WellsAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9BFBC63E22D5099800652E6E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "Steven Lamphear";
+				TargetAttributes = {
+					9BFBC64522D5099800652E6E = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					9BFBC65B22D5099900652E6E = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 9BFBC64522D5099800652E6E;
+					};
+					9BFBC66622D5099900652E6E = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 9BFBC64522D5099800652E6E;
+					};
+				};
+			};
+			buildConfigurationList = 9BFBC64122D5099800652E6E /* Build configuration list for PBXProject "WellsApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9BFBC63D22D5099800652E6E;
+			productRefGroup = 9BFBC64722D5099800652E6E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9BFBC64522D5099800652E6E /* WellsApp */,
+				9BFBC65B22D5099900652E6E /* WellsAppTests */,
+				9BFBC66622D5099900652E6E /* WellsAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9BFBC64422D5099800652E6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BFBC65622D5099900652E6E /* LaunchScreen.storyboard in Resources */,
+				9BFBC65322D5099900652E6E /* Preview Assets.xcassets in Resources */,
+				9BFBC65022D5099900652E6E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BFBC65A22D5099900652E6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BFBC66522D5099900652E6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9BFBC64222D5099800652E6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BFBC64A22D5099800652E6E /* AppDelegate.swift in Sources */,
+				9BFBC64C22D5099800652E6E /* SceneDelegate.swift in Sources */,
+				9BFBC67A22D5105F00652E6E /* LocalizedStrings.swift in Sources */,
+				9BFBC64E22D5099800652E6E /* ContentView.swift in Sources */,
+				9BFBC67C22D515F500652E6E /* EstimateModel.swift in Sources */,
+				9BAB18C922E780F800BA1D72 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BFBC65822D5099900652E6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BFBC66122D5099900652E6E /* WellsAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BFBC66322D5099900652E6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BFBC66C22D5099900652E6E /* WellsAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9BFBC65E22D5099900652E6E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BFBC64522D5099800652E6E /* WellsApp */;
+			targetProxy = 9BFBC65D22D5099900652E6E /* PBXContainerItemProxy */;
+		};
+		9BFBC66922D5099900652E6E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BFBC64522D5099800652E6E /* WellsApp */;
+			targetProxy = 9BFBC66822D5099900652E6E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9BFBC65422D5099900652E6E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BFBC65522D5099900652E6E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9BFBC66E22D5099900652E6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9BFBC66F22D5099900652E6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9BFBC67122D5099900652E6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WellsApp/WellsApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DERIVE_UIKITFORMAC_PRODUCT_BUNDLE_IDENTIFIER = YES;
+				DEVELOPMENT_ASSET_PATHS = "WellsApp/Preview\\ Content";
+				DEVELOPMENT_TEAM = B83GKBSQDR;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = WellsApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.printanddigital.WellsApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_UIKITFORMAC = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9BFBC67222D5099900652E6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WellsApp/WellsApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DERIVE_UIKITFORMAC_PRODUCT_BUNDLE_IDENTIFIER = YES;
+				DEVELOPMENT_ASSET_PATHS = "WellsApp/Preview\\ Content";
+				DEVELOPMENT_TEAM = B83GKBSQDR;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = WellsApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.printanddigital.WellsApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_UIKITFORMAC = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9BFBC67422D5099900652E6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B83GKBSQDR;
+				INFOPLIST_FILE = WellsAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.printanddigital.WellsAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WellsApp.app/WellsApp";
+			};
+			name = Debug;
+		};
+		9BFBC67522D5099900652E6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B83GKBSQDR;
+				INFOPLIST_FILE = WellsAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.printanddigital.WellsAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WellsApp.app/WellsApp";
+			};
+			name = Release;
+		};
+		9BFBC67722D5099900652E6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B83GKBSQDR;
+				INFOPLIST_FILE = WellsAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.printanddigital.WellsAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WellsApp;
+			};
+			name = Debug;
+		};
+		9BFBC67822D5099900652E6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B83GKBSQDR;
+				INFOPLIST_FILE = WellsAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.printanddigital.WellsAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WellsApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9BFBC64122D5099800652E6E /* Build configuration list for PBXProject "WellsApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BFBC66E22D5099900652E6E /* Debug */,
+				9BFBC66F22D5099900652E6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BFBC67022D5099900652E6E /* Build configuration list for PBXNativeTarget "WellsApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BFBC67122D5099900652E6E /* Debug */,
+				9BFBC67222D5099900652E6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BFBC67322D5099900652E6E /* Build configuration list for PBXNativeTarget "WellsAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BFBC67422D5099900652E6E /* Debug */,
+				9BFBC67522D5099900652E6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BFBC67622D5099900652E6E /* Build configuration list for PBXNativeTarget "WellsAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BFBC67722D5099900652E6E /* Debug */,
+				9BFBC67822D5099900652E6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9BFBC63E22D5099800652E6E /* Project object */;
+}
