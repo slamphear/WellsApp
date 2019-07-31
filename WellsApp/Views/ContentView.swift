@@ -16,7 +16,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             LogoHeaderView()
-            TabbedView(selection: $selection){
+            TabView(selection: $selection){
                 HomeView()
                 ProductsView()
                 ServicesView()
@@ -52,8 +52,8 @@ struct HomeView: View {
     var body: some View {
         ScrollView(.vertical) {
             Image("WideBuilding").resizable().scaledToFit()
-            Text(LocalizedStrings.homeTitle()).padding().font(.title).lineLimit(nil)
-            Text(LocalizedStrings.homeBody()).padding().font(.body).lineLimit(nil)
+            Text(LocalizedStrings.homeTitle()).padding().font(.title)
+            Text(LocalizedStrings.homeBody()).padding().font(.body)
             Spacer()
         }.tabItem({
             Image(systemName: "house")
@@ -66,17 +66,17 @@ struct ProductsView: View {
     var body: some View {
         ScrollView(.vertical) {
             Text(LocalizedStrings.products()).font(.title).padding()
-            Text(LocalizedStrings.productsDescription()).padding().font(.body).lineLimit(nil)
+            Text(LocalizedStrings.productsDescription()).padding().font(.body)
             Spacer()
             Text(LocalizedStrings.getInTouch()).font(.title)
-            Text(LocalizedStrings.getInTouchDescription()).padding().font(.body).lineLimit(nil)
+            Text(LocalizedStrings.getInTouchDescription()).padding().font(.body)
             Button(action: {
                 self.getAnEstimate()
             }, label: {
                 Text(LocalizedStrings.getAnEstimate())
             })
         }.tabItem {
-            Image(systemName: "printer")
+            Image(systemName: "paperclip")
             Text(LocalizedStrings.products())
         }.tag(ContentSection.Products.rawValue)
     }
@@ -152,7 +152,7 @@ struct ProjectDetailsView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(LocalizedStrings.projectDetails() + " *").bold()
-            Text(LocalizedStrings.projectDetailsDescription()).font(.caption).lineLimit(nil)
+            Text(LocalizedStrings.projectDetailsDescription()).font(.caption)
             TextField(LocalizedStrings.projectDetails(), text: $estimateModel.projectDetails)
         }
     }
@@ -164,7 +164,7 @@ struct AboutUsView: View {
             Text("About Us").font(.title).padding()
             Spacer()
         }.tabItem({
-            Image(systemName: "person.and.person")
+            Image(systemName: "info.circle")
             Text("About Us")
         }).tag(ContentSection.AboutUs.rawValue)
     }

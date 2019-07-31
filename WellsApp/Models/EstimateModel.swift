@@ -9,7 +9,7 @@
 import Combine
 import SwiftUI
 
-final class EstimateModel: BindableObject {
+final class EstimateModel: ObservableObject {
     
     let willChange = PassthroughSubject<EstimateModel, Never>()
     
