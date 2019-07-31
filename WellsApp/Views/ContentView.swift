@@ -8,7 +8,7 @@
 
 import Combine
 import SwiftUI
-
+import MapKit
 
 struct ContentView: View {
     @State private var selection = 0
@@ -36,7 +36,7 @@ struct LogoHeaderView: View {
                 Image("WellsLogo").resizable().scaledToFit().padding()
                 Spacer()
             }
-            Button(action: { self.dialPhoneNumber() }, label: { Text(LocalizedStrings.phoneNumber()).font(.footnote) }).padding()
+            Button(action: { self.dialPhoneNumber() }, label: { Text(LocalizedStrings.wellsPhoneNumber()).font(.footnote) }).padding()
         }
     }
     
@@ -55,6 +55,7 @@ struct HomeView: View {
             Text(LocalizedStrings.homeTitle()).padding().font(.title)
             Text(LocalizedStrings.homeBody()).padding().font(.body)
             Spacer()
+            MapView()
         }.tabItem({
             Image(systemName: "house")
             Text(LocalizedStrings.homeLabel())
@@ -173,19 +174,25 @@ struct AboutUsView: View {
 struct ContactUsView: View {
     var body: some View {
         ScrollView(.vertical) {
-            Text(LocalizedStrings.contactUs()).font(.title).padding()
-            //            Text(LocalizedStrings.officeHours()).bold().padding()
-            //            Text(LocalizedStrings.officeHoursFirstLine())
-            //            Text(LocalizedStrings.officeHoursSecondLine())
-            Spacer()
-            Text(LocalizedStrings.location()).bold().padding()
-            Text(LocalizedStrings.addressFirstLine())
-            Text(LocalizedStrings.addressSecondLine())
-            Spacer()
-            Text(LocalizedStrings.contact()).bold().padding()
-            Text("info@printanddigital.com")
-            Text(LocalizedStrings.phoneNumber())
-            Spacer()
+            // NOTE: Splitting contents into 2 VStacks because there appears to be a 10-item limit for a ScrollView.
+            VStack {
+                Text(LocalizedStrings.contactUs()).font(.title).padding()
+                Text(LocalizedStrings.officeHours()).bold().padding()
+                Text(LocalizedStrings.officeHoursFirstLine())
+                Text(LocalizedStrings.officeHoursSecondLine())
+                Spacer()
+                Text(LocalizedStrings.location()).bold().padding()
+                Text(LocalizedStrings.addressFirstLine())
+                Text(LocalizedStrings.addressSecondLine())
+                MapView()
+                Spacer()
+            }
+            VStack {
+                Text(LocalizedStrings.contact()).bold().padding()
+                Text("info@printanddigital.com")
+                Text(LocalizedStrings.wellsPhoneNumber())
+                Spacer()
+            }
         }.tabItem({
             Image(systemName: "envelope")
             Text(LocalizedStrings.contactUs())
@@ -193,6 +200,21 @@ struct ContactUsView: View {
     }
 }
 
+struct MapView: UIViewRepresentable {
+    func makeUIView(context: Context) -> MKMapView {
+        MKMapView()
+    }
+    
+    func updateUIView(_ view: MKMapView, context: Context) {
+        let coordinate = CLLocationCoordinate2D(latitude: 43.028690, longitude: -89.399430)
+        let span = MKCoordinateSpan(latitudeDelta: 0.07, longitudeDelta: 0.07)
+        let region = MKCoordinateRegion(center: coordinate, span: span)
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = coordinate
+        view.addAnnotation(annotation)
+        view.setRegion(region, animated: true)
+    }
+}
 
 #if DEBUG
 struct ContentView_Previews : PreviewProvider {

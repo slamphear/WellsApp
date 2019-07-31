@@ -87,7 +87,7 @@ public class LocalizedStrings {
         return "8:00AM - 4:30PM"
     }
     
-    static func phoneNumber() -> String {
+    static func wellsPhoneNumber() -> String {
         return "(608) 274-7474"
     }
     
