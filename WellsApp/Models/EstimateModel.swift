@@ -10,30 +10,8 @@ import Combine
 import SwiftUI
 
 final class EstimateModel: ObservableObject {
-    
-    let willChange = PassthroughSubject<EstimateModel, Never>()
-    
-    var firstName = "" {
-        willSet {
-            willChange.send(self)
-        }
-    }
-    
-    var lastName = "" {
-        willSet {
-            willChange.send(self)
-        }
-    }
-    
-    var emailAddress = "" {
-        willSet {
-            willChange.send(self)
-        }
-    }
-    
-    var projectDetails = "" {
-        willSet {
-            willChange.send(self)
-        }
-    }
+    @Published var firstName = ""
+    @Published var lastName = ""
+    @Published var emailAddress = ""
+    @Published var projectDetails = ""
 }

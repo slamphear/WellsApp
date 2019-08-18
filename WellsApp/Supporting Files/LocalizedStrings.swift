@@ -44,7 +44,7 @@ public class LocalizedStrings {
     }
     
     static func getInTouch() -> String {
-        return "Get in touch"
+        return "Get in Touch"
     }
     
     static func getInTouchDescription() -> String {

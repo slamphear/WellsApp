@@ -16,3 +16,8 @@ enum ContentSection: Int {
     case AboutUs = 4
     case ContactUs = 5
 }
+
+public class Constants {
+    public static let emailAddress = "info@printanddigital.com"
+    
+}

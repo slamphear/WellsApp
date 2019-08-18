@@ -7,37 +7,102 @@
 //
 
 import Combine
-import SwiftUI
 import MapKit
+import MessageUI
+import SwiftUI
+
 
 struct ContentView: View {
-    @State private var selection = 0
+    @State var selection = 0
  
     var body: some View {
         VStack {
             LogoHeaderView()
             TabView(selection: $selection){
                 HomeView()
-                ProductsView()
-                ServicesView()
+                ProductsView(selection: $selection)
+//                ServicesView()
                 EstimateView().environmentObject(EstimateModel())
-                AboutUsView()
+//                AboutUsView()
                 ContactUsView()
             }
         }
     }
 }
 
-struct LogoHeaderView: View {
+struct EmailButton: View {
+    @State var result: Result<MFMailComposeResult, Error>? = nil
+    @State var isShowingMailView = false
+    
     var body: some View {
-        ZStack(alignment: .trailing) {
-            HStack {
-                Spacer()
-                Image("WellsLogo").resizable().scaledToFit().padding()
-                Spacer()
-            }
-            Button(action: { self.dialPhoneNumber() }, label: { Text(LocalizedStrings.wellsPhoneNumber()).font(.footnote) }).padding()
+        Button(action: {
+            self.isShowingMailView.toggle()
+        }, label: {
+            Text(Constants.emailAddress)
+        })
+        .sheet(isPresented: $isShowingMailView, content: {
+            self.mailView()
+            .transition(.move(edge: .bottom))
+            .animation(.default)
+        })
+    }
+    
+    private func mailView() -> some View {
+        MFMailComposeViewController.canSendMail() ?
+            AnyView(MailView(isPresented: $isShowingMailView, result: $result)) :
+            AnyView(Text("Unable to send emails from this device"))
+    }
+}
+
+struct MailView: UIViewControllerRepresentable {
+    @Binding var isPresented: Bool
+    @Binding var result: Result<MFMailComposeResult, Error>?
+
+    class Coordinator: NSObject, MFMailComposeViewControllerDelegate {
+        @Binding var isShowing: Bool
+        @Binding var result: Result<MFMailComposeResult, Error>?
+
+        init(isShowing: Binding<Bool>,
+             result: Binding<Result<MFMailComposeResult, Error>?>) {
+            self._isShowing = isShowing
+            self._result = result
         }
+
+        func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+            defer { self.isShowing = false }
+            
+            guard error == nil else {
+                self.result = .failure(error!)
+                return
+            }
+            
+            self.result = .success(result)
+        }
+    }
+
+    func makeCoordinator() -> Coordinator {
+        return Coordinator(isShowing: self.$isPresented, result: self.$result)
+    }
+
+    func makeUIViewController(context: UIViewControllerRepresentableContext<MailView>) -> MFMailComposeViewController {
+        let mailViewController = MFMailComposeViewController()
+        mailViewController.mailComposeDelegate = context.coordinator
+        mailViewController.setToRecipients([Constants.emailAddress])
+        return mailViewController
+    }
+
+    func updateUIViewController(_ uiViewController: MFMailComposeViewController, context: UIViewControllerRepresentableContext<MailView>) { }
+}
+
+struct PhoneNumberButton: View {
+    let font: Font
+    
+    var body: some View {
+        Button(action: {
+            self.dialPhoneNumber()
+        }, label: {
+            Text(LocalizedStrings.wellsPhoneNumber()).font(self.font)
+        })
     }
     
     private func dialPhoneNumber() {
@@ -48,14 +113,27 @@ struct LogoHeaderView: View {
     }
 }
 
+
+struct LogoHeaderView: View {
+    var body: some View {
+        ZStack(alignment: .trailing) {
+            HStack {
+                Spacer()
+                Image("WellsLogo").resizable().scaledToFit().padding()
+                Spacer()
+            }
+            PhoneNumberButton(font: .footnote).padding()
+        }
+    }
+}
+
 struct HomeView: View {
     var body: some View {
         ScrollView(.vertical) {
             Image("WideBuilding").resizable().scaledToFit()
             Text(LocalizedStrings.homeTitle()).padding().font(.title)
             Text(LocalizedStrings.homeBody()).padding().font(.body)
-            Spacer()
-            MapView()
+            MapView().frame(height: 300).padding()
         }.tabItem({
             Image(systemName: "house")
             Text(LocalizedStrings.homeLabel())
@@ -64,18 +142,20 @@ struct HomeView: View {
 }
 
 struct ProductsView: View {
+    @Binding var selection: Int
+    
     var body: some View {
-        ScrollView(.vertical) {
+        VStack {  // TODO: Convert to ScrollView once it stops getting truncated.
             Text(LocalizedStrings.products()).font(.title).padding()
             Text(LocalizedStrings.productsDescription()).padding().font(.body)
-            Spacer()
             Text(LocalizedStrings.getInTouch()).font(.title)
             Text(LocalizedStrings.getInTouchDescription()).padding().font(.body)
             Button(action: {
-                self.getAnEstimate()
+                self.selection = ContentSection.Estimate.rawValue
             }, label: {
                 Text(LocalizedStrings.getAnEstimate())
             })
+            Spacer(minLength: 1.0)
         }.tabItem {
             Image(systemName: "paperclip")
             Text(LocalizedStrings.products())
@@ -174,7 +254,7 @@ struct AboutUsView: View {
 struct ContactUsView: View {
     var body: some View {
         ScrollView(.vertical) {
-            // NOTE: Splitting contents into 2 VStacks because there appears to be a 10-item limit for a ScrollView.
+            // NOTE: Splitting contents into 2 VStacks due to 10-item limit for a ScrollView.
             VStack {
                 Text(LocalizedStrings.contactUs()).font(.title).padding()
                 Text(LocalizedStrings.officeHours()).bold().padding()
@@ -189,8 +269,8 @@ struct ContactUsView: View {
             }
             VStack {
                 Text(LocalizedStrings.contact()).bold().padding()
-                Text("info@printanddigital.com")
-                Text(LocalizedStrings.wellsPhoneNumber())
+                EmailButton()
+                PhoneNumberButton(font: .body).padding()
                 Spacer()
             }
         }.tabItem({
