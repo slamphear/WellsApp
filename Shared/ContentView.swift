@@ -145,7 +145,7 @@ struct ProductsView: View {
     @Binding var selection: Int
     
     var body: some View {
-        VStack {  // TODO: Convert to ScrollView once it stops getting truncated.
+        ScrollView {
             Text(LocalizedStrings.products()).font(.title).padding()
             Text(LocalizedStrings.productsDescription()).padding().font(.body)
             Text(LocalizedStrings.getInTouch()).font(.title)
@@ -156,10 +156,12 @@ struct ProductsView: View {
                 Text(LocalizedStrings.getAnEstimate())
             })
             Spacer(minLength: 1.0)
-        }.tabItem {
+        }
+        .tabItem {
             Image(systemName: "paperclip")
             Text(LocalizedStrings.products())
-        }.tag(ContentSection.Products.rawValue)
+        }
+        .tag(ContentSection.Products.rawValue)
     }
     
     private func getAnEstimate() {
@@ -254,29 +256,28 @@ struct AboutUsView: View {
 struct ContactUsView: View {
     var body: some View {
         ScrollView(.vertical) {
-            // NOTE: Splitting contents into 2 VStacks due to 10-item limit for a ScrollView.
-            VStack {
+            Group {
                 Text(LocalizedStrings.contactUs()).font(.title).padding()
                 Text(LocalizedStrings.officeHours()).bold().padding()
                 Text(LocalizedStrings.officeHoursFirstLine())
                 Text(LocalizedStrings.officeHoursSecondLine())
-                Spacer()
+            }
+            Group {
                 Text(LocalizedStrings.location()).bold().padding()
                 Text(LocalizedStrings.addressFirstLine())
                 Text(LocalizedStrings.addressSecondLine())
-                MapView()
-                Spacer()
             }
-            VStack {
+            Group {
                 Text(LocalizedStrings.contact()).bold().padding()
                 EmailButton()
                 PhoneNumberButton(font: .body).padding()
-                Spacer()
             }
-        }.tabItem({
+        }
+        .tabItem({
             Image(systemName: "envelope")
             Text(LocalizedStrings.contactUs())
-        }).tag(ContentSection.ContactUs.rawValue)
+        })
+        .tag(ContentSection.ContactUs.rawValue)
     }
 }
 

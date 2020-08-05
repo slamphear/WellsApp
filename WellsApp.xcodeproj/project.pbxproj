@@ -7,73 +7,82 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9BAB18C922E780F800BA1D72 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAB18C822E780F800BA1D72 /* Constants.swift */; };
-		9BFBC64A22D5099800652E6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFBC64922D5099800652E6E /* AppDelegate.swift */; };
-		9BFBC64C22D5099800652E6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFBC64B22D5099800652E6E /* SceneDelegate.swift */; };
-		9BFBC64E22D5099800652E6E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFBC64D22D5099800652E6E /* ContentView.swift */; };
-		9BFBC65022D5099900652E6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BFBC64F22D5099900652E6E /* Assets.xcassets */; };
-		9BFBC65322D5099900652E6E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BFBC65222D5099900652E6E /* Preview Assets.xcassets */; };
-		9BFBC65622D5099900652E6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFBC65422D5099900652E6E /* LaunchScreen.storyboard */; };
-		9BFBC66122D5099900652E6E /* WellsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFBC66022D5099900652E6E /* WellsAppTests.swift */; };
-		9BFBC66C22D5099900652E6E /* WellsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFBC66B22D5099900652E6E /* WellsAppUITests.swift */; };
-		9BFBC67A22D5105F00652E6E /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFBC67922D5105F00652E6E /* LocalizedStrings.swift */; };
-		9BFBC67C22D515F500652E6E /* EstimateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFBC67B22D515F500652E6E /* EstimateModel.swift */; };
+		9B0576D624DA464800254F79 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0576D524DA464800254F79 /* Tests_iOS.swift */; };
+		9B0576E124DA464800254F79 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0576E024DA464800254F79 /* Tests_macOS.swift */; };
+		9B0576E324DA464800254F79 /* WellsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0576BA24DA464700254F79 /* WellsApp.swift */; };
+		9B0576E424DA464800254F79 /* WellsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0576BA24DA464700254F79 /* WellsApp.swift */; };
+		9B0576E724DA464800254F79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B0576BC24DA464800254F79 /* Assets.xcassets */; };
+		9B0576E824DA464800254F79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B0576BC24DA464800254F79 /* Assets.xcassets */; };
+		9B0576FB24DA477E00254F79 /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0576F924DA477E00254F79 /* LocalizedStrings.swift */; };
+		9B0576FC24DA477E00254F79 /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0576F924DA477E00254F79 /* LocalizedStrings.swift */; };
+		9B0576FD24DA477E00254F79 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0576FA24DA477E00254F79 /* Constants.swift */; };
+		9B0576FE24DA477E00254F79 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0576FA24DA477E00254F79 /* Constants.swift */; };
+		9B05770024DA478F00254F79 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0576FF24DA478F00254F79 /* ContentView.swift */; };
+		9B05770124DA478F00254F79 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0576FF24DA478F00254F79 /* ContentView.swift */; };
+		9B05770324DA479A00254F79 /* EstimateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B05770224DA479A00254F79 /* EstimateModel.swift */; };
+		9B05770424DA479A00254F79 /* EstimateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B05770224DA479A00254F79 /* EstimateModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9BFBC65D22D5099900652E6E /* PBXContainerItemProxy */ = {
+		9B0576D224DA464800254F79 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9BFBC63E22D5099800652E6E /* Project object */;
+			containerPortal = 9B0576B524DA464700254F79 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9BFBC64522D5099800652E6E;
-			remoteInfo = WellsApp;
+			remoteGlobalIDString = 9B0576C024DA464800254F79;
+			remoteInfo = "WellsApp (iOS)";
 		};
-		9BFBC66822D5099900652E6E /* PBXContainerItemProxy */ = {
+		9B0576DD24DA464800254F79 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9BFBC63E22D5099800652E6E /* Project object */;
+			containerPortal = 9B0576B524DA464700254F79 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9BFBC64522D5099800652E6E;
-			remoteInfo = WellsApp;
+			remoteGlobalIDString = 9B0576C824DA464800254F79;
+			remoteInfo = "WellsApp (macOS)";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9BAB18C722E77F5100BA1D72 /* WellsApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WellsApp.entitlements; sourceTree = "<group>"; };
-		9BAB18C822E780F800BA1D72 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		9BFBC64622D5099800652E6E /* WellsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WellsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9BFBC64922D5099800652E6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9BFBC64B22D5099800652E6E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9BFBC64D22D5099800652E6E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		9BFBC64F22D5099900652E6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9BFBC65222D5099900652E6E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		9BFBC65522D5099900652E6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9BFBC65722D5099900652E6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9BFBC65C22D5099900652E6E /* WellsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WellsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9BFBC66022D5099900652E6E /* WellsAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellsAppTests.swift; sourceTree = "<group>"; };
-		9BFBC66222D5099900652E6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9BFBC66722D5099900652E6E /* WellsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WellsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9BFBC66B22D5099900652E6E /* WellsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellsAppUITests.swift; sourceTree = "<group>"; };
-		9BFBC66D22D5099900652E6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9BFBC67922D5105F00652E6E /* LocalizedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
-		9BFBC67B22D515F500652E6E /* EstimateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateModel.swift; sourceTree = "<group>"; };
+		9B0576BA24DA464700254F79 /* WellsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellsApp.swift; sourceTree = "<group>"; };
+		9B0576BC24DA464800254F79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9B0576C124DA464800254F79 /* WellsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WellsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B0576C424DA464800254F79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B0576C924DA464800254F79 /* WellsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WellsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B0576CB24DA464800254F79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B0576CC24DA464800254F79 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		9B0576D124DA464800254F79 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B0576D524DA464800254F79 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
+		9B0576D724DA464800254F79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B0576DC24DA464800254F79 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B0576E024DA464800254F79 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		9B0576E224DA464800254F79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B0576F924DA477E00254F79 /* LocalizedStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
+		9B0576FA24DA477E00254F79 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9B0576FF24DA478F00254F79 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9B05770224DA479A00254F79 /* EstimateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstimateModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9BFBC64322D5099800652E6E /* Frameworks */ = {
+		9B0576BE24DA464800254F79 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9BFBC65922D5099900652E6E /* Frameworks */ = {
+		9B0576C624DA464800254F79 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9BFBC66422D5099900652E6E /* Frameworks */ = {
+		9B0576CE24DA464800254F79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B0576D924DA464800254F79 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -83,174 +92,176 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9BCB03EF22E77B6300C651D3 /* Views */ = {
+		9B0576B424DA464700254F79 = {
 			isa = PBXGroup;
 			children = (
-				9BFBC64D22D5099800652E6E /* ContentView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		9BCB03F022E77B8200C651D3 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				9BFBC67922D5105F00652E6E /* LocalizedStrings.swift */,
-				9BAB18C822E780F800BA1D72 /* Constants.swift */,
-			);
-			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		9BCB03F122E77B9400C651D3 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				9BFBC67B22D515F500652E6E /* EstimateModel.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		9BFBC63D22D5099800652E6E = {
-			isa = PBXGroup;
-			children = (
-				9BFBC64822D5099800652E6E /* WellsApp */,
-				9BFBC65F22D5099900652E6E /* WellsAppTests */,
-				9BFBC66A22D5099900652E6E /* WellsAppUITests */,
-				9BFBC64722D5099800652E6E /* Products */,
+				9B0576B924DA464700254F79 /* Shared */,
+				9B0576C324DA464800254F79 /* iOS */,
+				9B0576CA24DA464800254F79 /* macOS */,
+				9B0576D424DA464800254F79 /* Tests iOS */,
+				9B0576DF24DA464800254F79 /* Tests macOS */,
+				9B0576C224DA464800254F79 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		9BFBC64722D5099800652E6E /* Products */ = {
+		9B0576B924DA464700254F79 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				9BFBC64622D5099800652E6E /* WellsApp.app */,
-				9BFBC65C22D5099900652E6E /* WellsAppTests.xctest */,
-				9BFBC66722D5099900652E6E /* WellsAppUITests.xctest */,
+				9B0576FA24DA477E00254F79 /* Constants.swift */,
+				9B0576FF24DA478F00254F79 /* ContentView.swift */,
+				9B05770224DA479A00254F79 /* EstimateModel.swift */,
+				9B0576F924DA477E00254F79 /* LocalizedStrings.swift */,
+				9B0576BA24DA464700254F79 /* WellsApp.swift */,
+				9B0576BC24DA464800254F79 /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		9B0576C224DA464800254F79 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9B0576C124DA464800254F79 /* WellsApp.app */,
+				9B0576C924DA464800254F79 /* WellsApp.app */,
+				9B0576D124DA464800254F79 /* Tests iOS.xctest */,
+				9B0576DC24DA464800254F79 /* Tests macOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9BFBC64822D5099800652E6E /* WellsApp */ = {
+		9B0576C324DA464800254F79 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				9BAB18C722E77F5100BA1D72 /* WellsApp.entitlements */,
-				9BCB03F022E77B8200C651D3 /* Supporting Files */,
-				9BCB03F122E77B9400C651D3 /* Models */,
-				9BCB03EF22E77B6300C651D3 /* Views */,
-				9BFBC64922D5099800652E6E /* AppDelegate.swift */,
-				9BFBC64B22D5099800652E6E /* SceneDelegate.swift */,
-				9BFBC64F22D5099900652E6E /* Assets.xcassets */,
-				9BFBC65422D5099900652E6E /* LaunchScreen.storyboard */,
-				9BFBC65722D5099900652E6E /* Info.plist */,
-				9BFBC65122D5099900652E6E /* Preview Content */,
+				9B0576C424DA464800254F79 /* Info.plist */,
 			);
-			path = WellsApp;
+			path = iOS;
 			sourceTree = "<group>";
 		};
-		9BFBC65122D5099900652E6E /* Preview Content */ = {
+		9B0576CA24DA464800254F79 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
-				9BFBC65222D5099900652E6E /* Preview Assets.xcassets */,
+				9B0576CB24DA464800254F79 /* Info.plist */,
+				9B0576CC24DA464800254F79 /* macOS.entitlements */,
 			);
-			path = "Preview Content";
+			path = macOS;
 			sourceTree = "<group>";
 		};
-		9BFBC65F22D5099900652E6E /* WellsAppTests */ = {
+		9B0576D424DA464800254F79 /* Tests iOS */ = {
 			isa = PBXGroup;
 			children = (
-				9BFBC66022D5099900652E6E /* WellsAppTests.swift */,
-				9BFBC66222D5099900652E6E /* Info.plist */,
+				9B0576D524DA464800254F79 /* Tests_iOS.swift */,
+				9B0576D724DA464800254F79 /* Info.plist */,
 			);
-			path = WellsAppTests;
+			path = "Tests iOS";
 			sourceTree = "<group>";
 		};
-		9BFBC66A22D5099900652E6E /* WellsAppUITests */ = {
+		9B0576DF24DA464800254F79 /* Tests macOS */ = {
 			isa = PBXGroup;
 			children = (
-				9BFBC66B22D5099900652E6E /* WellsAppUITests.swift */,
-				9BFBC66D22D5099900652E6E /* Info.plist */,
+				9B0576E024DA464800254F79 /* Tests_macOS.swift */,
+				9B0576E224DA464800254F79 /* Info.plist */,
 			);
-			path = WellsAppUITests;
+			path = "Tests macOS";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9BFBC64522D5099800652E6E /* WellsApp */ = {
+		9B0576C024DA464800254F79 /* WellsApp (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9BFBC67022D5099900652E6E /* Build configuration list for PBXNativeTarget "WellsApp" */;
+			buildConfigurationList = 9B0576EB24DA464800254F79 /* Build configuration list for PBXNativeTarget "WellsApp (iOS)" */;
 			buildPhases = (
-				9BFBC64222D5099800652E6E /* Sources */,
-				9BFBC64322D5099800652E6E /* Frameworks */,
-				9BFBC64422D5099800652E6E /* Resources */,
+				9B0576BD24DA464800254F79 /* Sources */,
+				9B0576BE24DA464800254F79 /* Frameworks */,
+				9B0576BF24DA464800254F79 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = WellsApp;
-			productName = WellsApp;
-			productReference = 9BFBC64622D5099800652E6E /* WellsApp.app */;
+			name = "WellsApp (iOS)";
+			productName = "WellsApp (iOS)";
+			productReference = 9B0576C124DA464800254F79 /* WellsApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9BFBC65B22D5099900652E6E /* WellsAppTests */ = {
+		9B0576C824DA464800254F79 /* WellsApp (macOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9BFBC67322D5099900652E6E /* Build configuration list for PBXNativeTarget "WellsAppTests" */;
+			buildConfigurationList = 9B0576EE24DA464800254F79 /* Build configuration list for PBXNativeTarget "WellsApp (macOS)" */;
 			buildPhases = (
-				9BFBC65822D5099900652E6E /* Sources */,
-				9BFBC65922D5099900652E6E /* Frameworks */,
-				9BFBC65A22D5099900652E6E /* Resources */,
+				9B0576C524DA464800254F79 /* Sources */,
+				9B0576C624DA464800254F79 /* Frameworks */,
+				9B0576C724DA464800254F79 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9BFBC65E22D5099900652E6E /* PBXTargetDependency */,
 			);
-			name = WellsAppTests;
-			productName = WellsAppTests;
-			productReference = 9BFBC65C22D5099900652E6E /* WellsAppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
+			name = "WellsApp (macOS)";
+			productName = "WellsApp (macOS)";
+			productReference = 9B0576C924DA464800254F79 /* WellsApp.app */;
+			productType = "com.apple.product-type.application";
 		};
-		9BFBC66622D5099900652E6E /* WellsAppUITests */ = {
+		9B0576D024DA464800254F79 /* Tests iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9BFBC67622D5099900652E6E /* Build configuration list for PBXNativeTarget "WellsAppUITests" */;
+			buildConfigurationList = 9B0576F124DA464800254F79 /* Build configuration list for PBXNativeTarget "Tests iOS" */;
 			buildPhases = (
-				9BFBC66322D5099900652E6E /* Sources */,
-				9BFBC66422D5099900652E6E /* Frameworks */,
-				9BFBC66522D5099900652E6E /* Resources */,
+				9B0576CD24DA464800254F79 /* Sources */,
+				9B0576CE24DA464800254F79 /* Frameworks */,
+				9B0576CF24DA464800254F79 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9BFBC66922D5099900652E6E /* PBXTargetDependency */,
+				9B0576D324DA464800254F79 /* PBXTargetDependency */,
 			);
-			name = WellsAppUITests;
-			productName = WellsAppUITests;
-			productReference = 9BFBC66722D5099900652E6E /* WellsAppUITests.xctest */;
+			name = "Tests iOS";
+			productName = "Tests iOS";
+			productReference = 9B0576D124DA464800254F79 /* Tests iOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		9B0576DB24DA464800254F79 /* Tests macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B0576F424DA464800254F79 /* Build configuration list for PBXNativeTarget "Tests macOS" */;
+			buildPhases = (
+				9B0576D824DA464800254F79 /* Sources */,
+				9B0576D924DA464800254F79 /* Frameworks */,
+				9B0576DA24DA464800254F79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B0576DE24DA464800254F79 /* PBXTargetDependency */,
+			);
+			name = "Tests macOS";
+			productName = "Tests macOS";
+			productReference = 9B0576DC24DA464800254F79 /* Tests macOS.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		9BFBC63E22D5099800652E6E /* Project object */ = {
+		9B0576B524DA464700254F79 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
-				ORGANIZATIONNAME = "Steven Lamphear";
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
 				TargetAttributes = {
-					9BFBC64522D5099800652E6E = {
-						CreatedOnToolsVersion = 11.0;
+					9B0576C024DA464800254F79 = {
+						CreatedOnToolsVersion = 12.0;
 					};
-					9BFBC65B22D5099900652E6E = {
-						CreatedOnToolsVersion = 11.0;
-						TestTargetID = 9BFBC64522D5099800652E6E;
+					9B0576C824DA464800254F79 = {
+						CreatedOnToolsVersion = 12.0;
 					};
-					9BFBC66622D5099900652E6E = {
-						CreatedOnToolsVersion = 11.0;
-						TestTargetID = 9BFBC64522D5099800652E6E;
+					9B0576D024DA464800254F79 = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 9B0576C024DA464800254F79;
+					};
+					9B0576DB24DA464800254F79 = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 9B0576C824DA464800254F79;
 					};
 				};
 			};
-			buildConfigurationList = 9BFBC64122D5099800652E6E /* Build configuration list for PBXProject "WellsApp" */;
+			buildConfigurationList = 9B0576B824DA464700254F79 /* Build configuration list for PBXProject "WellsApp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -258,37 +269,44 @@
 				en,
 				Base,
 			);
-			mainGroup = 9BFBC63D22D5099800652E6E;
-			productRefGroup = 9BFBC64722D5099800652E6E /* Products */;
+			mainGroup = 9B0576B424DA464700254F79;
+			productRefGroup = 9B0576C224DA464800254F79 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9BFBC64522D5099800652E6E /* WellsApp */,
-				9BFBC65B22D5099900652E6E /* WellsAppTests */,
-				9BFBC66622D5099900652E6E /* WellsAppUITests */,
+				9B0576C024DA464800254F79 /* WellsApp (iOS) */,
+				9B0576C824DA464800254F79 /* WellsApp (macOS) */,
+				9B0576D024DA464800254F79 /* Tests iOS */,
+				9B0576DB24DA464800254F79 /* Tests macOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9BFBC64422D5099800652E6E /* Resources */ = {
+		9B0576BF24DA464800254F79 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BFBC65622D5099900652E6E /* LaunchScreen.storyboard in Resources */,
-				9BFBC65322D5099900652E6E /* Preview Assets.xcassets in Resources */,
-				9BFBC65022D5099900652E6E /* Assets.xcassets in Resources */,
+				9B0576E724DA464800254F79 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9BFBC65A22D5099900652E6E /* Resources */ = {
+		9B0576C724DA464800254F79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B0576E824DA464800254F79 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B0576CF24DA464800254F79 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9BFBC66522D5099900652E6E /* Resources */ = {
+		9B0576DA24DA464800254F79 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -298,63 +316,63 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9BFBC64222D5099800652E6E /* Sources */ = {
+		9B0576BD24DA464800254F79 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BFBC64A22D5099800652E6E /* AppDelegate.swift in Sources */,
-				9BFBC64C22D5099800652E6E /* SceneDelegate.swift in Sources */,
-				9BFBC67A22D5105F00652E6E /* LocalizedStrings.swift in Sources */,
-				9BFBC64E22D5099800652E6E /* ContentView.swift in Sources */,
-				9BFBC67C22D515F500652E6E /* EstimateModel.swift in Sources */,
-				9BAB18C922E780F800BA1D72 /* Constants.swift in Sources */,
+				9B05770024DA478F00254F79 /* ContentView.swift in Sources */,
+				9B0576FB24DA477E00254F79 /* LocalizedStrings.swift in Sources */,
+				9B0576E324DA464800254F79 /* WellsApp.swift in Sources */,
+				9B0576FD24DA477E00254F79 /* Constants.swift in Sources */,
+				9B05770324DA479A00254F79 /* EstimateModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9BFBC65822D5099900652E6E /* Sources */ = {
+		9B0576C524DA464800254F79 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BFBC66122D5099900652E6E /* WellsAppTests.swift in Sources */,
+				9B05770124DA478F00254F79 /* ContentView.swift in Sources */,
+				9B0576FC24DA477E00254F79 /* LocalizedStrings.swift in Sources */,
+				9B0576E424DA464800254F79 /* WellsApp.swift in Sources */,
+				9B0576FE24DA477E00254F79 /* Constants.swift in Sources */,
+				9B05770424DA479A00254F79 /* EstimateModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9BFBC66322D5099900652E6E /* Sources */ = {
+		9B0576CD24DA464800254F79 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BFBC66C22D5099900652E6E /* WellsAppUITests.swift in Sources */,
+				9B0576D624DA464800254F79 /* Tests_iOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B0576D824DA464800254F79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B0576E124DA464800254F79 /* Tests_macOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9BFBC65E22D5099900652E6E /* PBXTargetDependency */ = {
+		9B0576D324DA464800254F79 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9BFBC64522D5099800652E6E /* WellsApp */;
-			targetProxy = 9BFBC65D22D5099900652E6E /* PBXContainerItemProxy */;
+			target = 9B0576C024DA464800254F79 /* WellsApp (iOS) */;
+			targetProxy = 9B0576D224DA464800254F79 /* PBXContainerItemProxy */;
 		};
-		9BFBC66922D5099900652E6E /* PBXTargetDependency */ = {
+		9B0576DE24DA464800254F79 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9BFBC64522D5099800652E6E /* WellsApp */;
-			targetProxy = 9BFBC66822D5099900652E6E /* PBXContainerItemProxy */;
+			target = 9B0576C824DA464800254F79 /* WellsApp (macOS) */;
+			targetProxy = 9B0576DD24DA464800254F79 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		9BFBC65422D5099900652E6E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9BFBC65522D5099900652E6E /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		9BFBC66E22D5099900652E6E /* Debug */ = {
+		9B0576E924DA464800254F79 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -380,6 +398,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -404,17 +423,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		9BFBC66F22D5099900652E6E /* Release */ = {
+		9B0576EA24DA464800254F79 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -440,6 +457,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -458,184 +476,244 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		9B0576EC24DA464800254F79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B83GKBSQDR;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.stevenlamphear.WellsApp;
+				PRODUCT_NAME = WellsApp;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9B0576ED24DA464800254F79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B83GKBSQDR;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.stevenlamphear.WellsApp;
+				PRODUCT_NAME = WellsApp;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		9BFBC67122D5099900652E6E /* Debug */ = {
+		9B0576EF24DA464800254F79 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = WellsApp/WellsApp.entitlements;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DERIVE_UIKITFORMAC_PRODUCT_BUNDLE_IDENTIFIER = YES;
-				DEVELOPMENT_ASSET_PATHS = "WellsApp/Preview\\ Content";
+				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B83GKBSQDR;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = WellsApp/Info.plist;
+				INFOPLIST_FILE = macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
+					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.printanddigital.WellsApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_UIKITFORMAC = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stevenlamphear.WellsApp;
+				PRODUCT_NAME = WellsApp;
+				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		9BFBC67222D5099900652E6E /* Release */ = {
+		9B0576F024DA464800254F79 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = WellsApp/WellsApp.entitlements;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DERIVE_UIKITFORMAC_PRODUCT_BUNDLE_IDENTIFIER = YES;
-				DEVELOPMENT_ASSET_PATHS = "WellsApp/Preview\\ Content";
+				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B83GKBSQDR;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = WellsApp/Info.plist;
+				INFOPLIST_FILE = macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
+					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.printanddigital.WellsApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_UIKITFORMAC = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stevenlamphear.WellsApp;
+				PRODUCT_NAME = WellsApp;
+				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		9BFBC67422D5099900652E6E /* Debug */ = {
+		9B0576F224DA464800254F79 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B83GKBSQDR;
-				INFOPLIST_FILE = WellsAppTests/Info.plist;
+				INFOPLIST_FILE = "Tests iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.printanddigital.WellsAppTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stevenlamphear.Tests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WellsApp.app/WellsApp";
+				TEST_TARGET_NAME = "WellsApp (iOS)";
 			};
 			name = Debug;
 		};
-		9BFBC67522D5099900652E6E /* Release */ = {
+		9B0576F324DA464800254F79 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B83GKBSQDR;
-				INFOPLIST_FILE = WellsAppTests/Info.plist;
+				INFOPLIST_FILE = "Tests iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.printanddigital.WellsAppTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stevenlamphear.Tests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WellsApp.app/WellsApp";
+				TEST_TARGET_NAME = "WellsApp (iOS)";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		9BFBC67722D5099900652E6E /* Debug */ = {
+		9B0576F524DA464800254F79 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B83GKBSQDR;
-				INFOPLIST_FILE = WellsAppUITests/Info.plist;
+				INFOPLIST_FILE = "Tests macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.printanddigital.WellsAppUITests;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stevenlamphear.Tests-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WellsApp;
+				TEST_TARGET_NAME = "WellsApp (macOS)";
 			};
 			name = Debug;
 		};
-		9BFBC67822D5099900652E6E /* Release */ = {
+		9B0576F624DA464800254F79 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B83GKBSQDR;
-				INFOPLIST_FILE = WellsAppUITests/Info.plist;
+				INFOPLIST_FILE = "Tests macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.printanddigital.WellsAppUITests;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stevenlamphear.Tests-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WellsApp;
+				TEST_TARGET_NAME = "WellsApp (macOS)";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9BFBC64122D5099800652E6E /* Build configuration list for PBXProject "WellsApp" */ = {
+		9B0576B824DA464700254F79 /* Build configuration list for PBXProject "WellsApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9BFBC66E22D5099900652E6E /* Debug */,
-				9BFBC66F22D5099900652E6E /* Release */,
+				9B0576E924DA464800254F79 /* Debug */,
+				9B0576EA24DA464800254F79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9BFBC67022D5099900652E6E /* Build configuration list for PBXNativeTarget "WellsApp" */ = {
+		9B0576EB24DA464800254F79 /* Build configuration list for PBXNativeTarget "WellsApp (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9BFBC67122D5099900652E6E /* Debug */,
-				9BFBC67222D5099900652E6E /* Release */,
+				9B0576EC24DA464800254F79 /* Debug */,
+				9B0576ED24DA464800254F79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9BFBC67322D5099900652E6E /* Build configuration list for PBXNativeTarget "WellsAppTests" */ = {
+		9B0576EE24DA464800254F79 /* Build configuration list for PBXNativeTarget "WellsApp (macOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9BFBC67422D5099900652E6E /* Debug */,
-				9BFBC67522D5099900652E6E /* Release */,
+				9B0576EF24DA464800254F79 /* Debug */,
+				9B0576F024DA464800254F79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9BFBC67622D5099900652E6E /* Build configuration list for PBXNativeTarget "WellsAppUITests" */ = {
+		9B0576F124DA464800254F79 /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9BFBC67722D5099900652E6E /* Debug */,
-				9BFBC67822D5099900652E6E /* Release */,
+				9B0576F224DA464800254F79 /* Debug */,
+				9B0576F324DA464800254F79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B0576F424DA464800254F79 /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B0576F524DA464800254F79 /* Debug */,
+				9B0576F624DA464800254F79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 9BFBC63E22D5099800652E6E /* Project object */;
+	rootObject = 9B0576B524DA464700254F79 /* Project object */;
 }
