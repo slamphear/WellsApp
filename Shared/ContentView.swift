@@ -129,9 +129,11 @@ struct HomeView: View {
     var body: some View {
         ScrollView(.vertical) {
             Image("WideBuilding").resizable().scaledToFit()
-            Text(TokenizedStrings.homeTitle()).padding().font(.title)
-            Text(TokenizedStrings.homeBody()).padding().font(.body)
-            MapView().frame(height: 300).padding()
+            VStack(alignment: .leading, spacing: 16.0) {
+                Text(TokenizedStrings.homeTitle()).font(.title2)
+                Text(TokenizedStrings.homeBody()).font(.body)
+                MapView().frame(height: 300)
+            }.padding()
         }.tabItem({
             Image(systemName: "house")
             Text(TokenizedStrings.homeLabel())
@@ -144,16 +146,18 @@ struct ProductsView: View {
     
     var body: some View {
         ScrollView {
-            Text(TokenizedStrings.products()).font(.title).padding()
-            Text(TokenizedStrings.productsDescription()).padding().font(.body)
-            Text(TokenizedStrings.getInTouch()).font(.title)
-            Text(TokenizedStrings.getInTouchDescription()).padding().font(.body)
-            Button(action: {
-                self.navigationModel.selectedTab = .estimate
-            }, label: {
-                Text(TokenizedStrings.getAnEstimate())
-            })
-            Spacer(minLength: 1.0)
+            VStack(alignment: .leading, spacing: 16.0) {
+                Text(TokenizedStrings.products()).font(.title)
+                Text(TokenizedStrings.productsDescription()).font(.body)
+                Text(TokenizedStrings.getInTouch()).font(.title)
+                Text(TokenizedStrings.getInTouchDescription()).font(.body)
+                Button(action: {
+                    self.navigationModel.selectedTab = .estimate
+                }, label: {
+                    Text(TokenizedStrings.getAnEstimate())
+                })
+                Spacer(minLength: 1.0)
+            }.padding()
         }
         .tabItem {
             Image(systemName: "paperclip")
@@ -175,11 +179,14 @@ struct EstimateFormView: View {
     
     var body: some View {
         ScrollView(.vertical) {
-            Text(TokenizedStrings.estimateLabel()).font(.title).padding()
-            NameInputView().padding()
-            EmailAddressInputView().padding()
-            PhoneNumberInputView().padding()
-            ProjectDetailsInputView().padding()
+            VStack(alignment: .leading, spacing: 16.0) {
+                Text(TokenizedStrings.estimateLabel()).font(.title)
+                NameInputView()
+                EmailAddressInputView()
+                PhoneNumberInputView()
+                ProjectDetailsInputView()
+            }.padding()
+            
             Button(action: { self.submitEstimateRequest() }, label: { Text(TokenizedStrings.submit()) })
                 .disabled(self.submitButtonDisabled)
             Spacer()
@@ -314,7 +321,7 @@ struct ProjectDetailsInputView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(TokenizedStrings.projectDetails() + " *").bold()
-            Text(TokenizedStrings.projectDetailsDescription()).font(.caption)
+            Text(TokenizedStrings.projectDetailsDescription()).allowsTightening(true)
             TextEditor(text: $estimateModel.projectDetails)
                 .frame(height: 120)
                 .padding(EdgeInsets(top: 0, leading: 4, bottom: 0, trailing: 4))
