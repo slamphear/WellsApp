@@ -1,6 +1,6 @@
 //
 //  WellsApp.swift
-//  Shared
+//  WellsPrintAndDigital
 //
 //  Created by Steven Lamphear on 8/4/20.
 //

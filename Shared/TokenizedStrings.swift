@@ -1,13 +1,13 @@
 //
-//  LocalizedStrings.swift
+//  TokenizedStrings.swift
 //  WellsPrintAndDigital
 //
 //  Created by Steven Lamphear on 7/9/19.
 //  Copyright © 2019 Steven Lamphear. All rights reserved.
 //
 
-// These strings are actually just tokenized for now.
-// If necessary, they could be localized at a later date.
+// These strings are tokenized so that they could be localized at a later date if needed.
+// Strings that would never be localized are in Constants.swift.
 
 public class TokenizedStrings {
     static func aboutUs() -> String {
@@ -28,6 +28,14 @@ public class TokenizedStrings {
     
     static func estimateLabel() -> String {
         return "Get an Estimate"
+    }
+    
+    static func estimateRequestSubmittedMessage() -> String {
+        return "Your estimate request has been submitted. We will be in touch as soon as we have reviewed your request. We look forward to working with you on your project!"
+    }
+    
+    static func estimateRequestSubmittedTitle() -> String {
+        return "Estimate Request Submitted"
     }
     
     static func firstName() -> String {
@@ -80,6 +88,10 @@ public class TokenizedStrings {
     
     static func officeHoursSecondLine() -> String {
         return "8:00AM - 4:30PM"
+    }
+    
+    static func ok() -> String {
+        return "OK"
     }
     
     static func phoneNumber() -> String {

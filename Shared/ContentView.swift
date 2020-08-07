@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  WellsApp
+//  WellsPrintAndDigital
 //
 //  Created by Steven Lamphear on 7/9/19.
 //  Copyright © 2019 Steven Lamphear. All rights reserved.
@@ -10,23 +10,24 @@ import Combine
 import MapKit
 import MessageUI
 import SwiftUI
+import AudioToolbox
 
 
 struct ContentView: View {
+    @State var navigationModel = NavigationModel()
     @State var selection = 0
  
     var body: some View {
         VStack {
             LogoHeaderView()
-            TabView(selection: $selection){
+            TabView(selection: self.$navigationModel.selectedTab){
                 HomeView()
-                ProductsView(selection: $selection)
-//                ServicesView()
-                EstimateView().environmentObject(EstimateModel())
-//                AboutUsView()
+                ProductsView()
+                EstimateFormView().environmentObject(EstimateModel())
                 ContactUsView()
             }
         }
+        .environmentObject(self.navigationModel)
     }
 }
 
@@ -38,7 +39,7 @@ struct EmailButton: View {
         Button(action: {
             self.isShowingMailView.toggle()
         }, label: {
-            Text(Constants.emailAddress)
+            Text(Constants.wellsEmailAddress)
         })
         .sheet(isPresented: $isShowingMailView, content: {
             self.mailView()
@@ -87,7 +88,7 @@ struct MailView: UIViewControllerRepresentable {
     func makeUIViewController(context: UIViewControllerRepresentableContext<MailView>) -> MFMailComposeViewController {
         let mailViewController = MFMailComposeViewController()
         mailViewController.mailComposeDelegate = context.coordinator
-        mailViewController.setToRecipients([Constants.emailAddress])
+        mailViewController.setToRecipients([Constants.wellsEmailAddress])
         return mailViewController
     }
 
@@ -101,7 +102,7 @@ struct PhoneNumberButton: View {
         Button(action: {
             self.dialPhoneNumber()
         }, label: {
-            Text(LocalizedStrings.wellsPhoneNumber()).font(self.font)
+            Text(TokenizedStrings.wellsPhoneNumber()).font(self.font)
         })
     }
     
@@ -116,14 +117,11 @@ struct PhoneNumberButton: View {
 
 struct LogoHeaderView: View {
     var body: some View {
-        ZStack(alignment: .trailing) {
-            HStack {
-                Spacer()
-                Image("WellsLogo").resizable().scaledToFit().padding()
-                Spacer()
-            }
+        HStack {
+            Image("WellsLogo").resizable().scaledToFit().padding()
+            Spacer()
             PhoneNumberButton(font: .footnote).padding()
-        }
+        }.frame(maxHeight: 75)
     }
 }
 
@@ -131,37 +129,37 @@ struct HomeView: View {
     var body: some View {
         ScrollView(.vertical) {
             Image("WideBuilding").resizable().scaledToFit()
-            Text(LocalizedStrings.homeTitle()).padding().font(.title)
-            Text(LocalizedStrings.homeBody()).padding().font(.body)
+            Text(TokenizedStrings.homeTitle()).padding().font(.title)
+            Text(TokenizedStrings.homeBody()).padding().font(.body)
             MapView().frame(height: 300).padding()
         }.tabItem({
             Image(systemName: "house")
-            Text(LocalizedStrings.homeLabel())
-        }).tag(ContentSection.Home.rawValue)
+            Text(TokenizedStrings.homeLabel())
+        }).tag(Tab.home)
     }
 }
 
 struct ProductsView: View {
-    @Binding var selection: Int
+    @EnvironmentObject var navigationModel: NavigationModel
     
     var body: some View {
         ScrollView {
-            Text(LocalizedStrings.products()).font(.title).padding()
-            Text(LocalizedStrings.productsDescription()).padding().font(.body)
-            Text(LocalizedStrings.getInTouch()).font(.title)
-            Text(LocalizedStrings.getInTouchDescription()).padding().font(.body)
+            Text(TokenizedStrings.products()).font(.title).padding()
+            Text(TokenizedStrings.productsDescription()).padding().font(.body)
+            Text(TokenizedStrings.getInTouch()).font(.title)
+            Text(TokenizedStrings.getInTouchDescription()).padding().font(.body)
             Button(action: {
-                self.selection = ContentSection.Estimate.rawValue
+                self.navigationModel.selectedTab = .estimate
             }, label: {
-                Text(LocalizedStrings.getAnEstimate())
+                Text(TokenizedStrings.getAnEstimate())
             })
             Spacer(minLength: 1.0)
         }
         .tabItem {
             Image(systemName: "paperclip")
-            Text(LocalizedStrings.products())
+            Text(TokenizedStrings.products())
         }
-        .tag(ContentSection.Products.rawValue)
+        .tag(Tab.products)
     }
     
     private func getAnEstimate() {
@@ -169,87 +167,161 @@ struct ProductsView: View {
     }
 }
 
-struct ServicesView: View {
-    var body: some View {
-        ScrollView(.vertical) {
-            Text(LocalizedStrings.services()).font(.title).padding()
-            Spacer()
-        }.tabItem {
-            Image(systemName: "cloud")
-            Text(LocalizedStrings.services())
-        }.tag(ContentSection.Services.rawValue)
-    }
-}
-
-struct EstimateView: View {
+struct EstimateFormView: View {
     @EnvironmentObject var estimateModel: EstimateModel
+    @EnvironmentObject var navigationModel: NavigationModel
+    @State var submitButtonDisabled = true
+    @State var showSubmitDialog = false
     
     var body: some View {
         ScrollView(.vertical) {
-            Text(LocalizedStrings.estimateLabel()).font(.title).padding()
-            NameView().padding()
-            EmailAddressView().padding()
-            ProjectDetailsView().padding()
-            Button(action: { self.submitEstimateRequest() }, label: { Text(LocalizedStrings.submit()) })
+            Text(TokenizedStrings.estimateLabel()).font(.title).padding()
+            NameInputView().padding()
+            EmailAddressInputView().padding()
+            PhoneNumberInputView().padding()
+            ProjectDetailsInputView().padding()
+            Button(action: { self.submitEstimateRequest() }, label: { Text(TokenizedStrings.submit()) })
+                .disabled(self.submitButtonDisabled)
             Spacer()
-        }.tabItem({
+        }
+        .onChange(of: self.estimateModel.firstName, perform: { newValue in
+            self.updateSubmitButtonState()
+        })
+        .onChange(of: self.estimateModel.lastName, perform: { newValue in
+            self.updateSubmitButtonState()
+        })
+        .onChange(of: self.estimateModel.validEmailAddressEntered, perform: { newValue in
+            self.updateSubmitButtonState()
+        })
+        .onChange(of: self.estimateModel.validPhoneNumberEntered, perform: { newValue in
+            self.updateSubmitButtonState()
+        })
+        .onChange(of: self.estimateModel.projectDetails, perform: { newValue in
+            self.updateSubmitButtonState()
+        })
+        .tabItem({
             Image(systemName: "dollarsign.circle")
-            Text(LocalizedStrings.estimateLabel())
-        }).tag(ContentSection.Estimate.rawValue)
+            Text(TokenizedStrings.estimateLabel())
+        }).tag(Tab.estimate)
+        .alert(isPresented: self.$showSubmitDialog, content: {
+            Alert(title: Text(TokenizedStrings.estimateRequestSubmittedTitle()),
+                  message: Text(TokenizedStrings.estimateRequestSubmittedMessage()),
+                  dismissButton: .default(Text(TokenizedStrings.ok()), action: {
+                    self.showSubmitDialog = false
+                    self.estimateModel.reset()
+                    self.navigationModel.selectedTab = .home
+            }))
+        })
+    }
+    
+    private func updateSubmitButtonState() {
+        self.submitButtonDisabled = self.estimateModel.firstName.isEmpty
+            || self.estimateModel.lastName.isEmpty
+            || !self.estimateModel.validEmailAddressEntered
+            || !self.estimateModel.validPhoneNumberEntered
+            || self.estimateModel.projectDetails.isEmpty
     }
     
     private func submitEstimateRequest() {
-        print("Submitting estimate...")
+        self.showSubmitDialog = true
     }
 }
 
-struct NameView: View {
+struct NameInputView: View {
     @EnvironmentObject var estimateModel: EstimateModel
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(LocalizedStrings.name() + " *").bold()
+            Text(TokenizedStrings.name() + " *").bold()
             
             HStack {
-                TextField(LocalizedStrings.firstName(), text: $estimateModel.firstName)
-                TextField(LocalizedStrings.lastName(), text: $estimateModel.lastName)
+                TextField(TokenizedStrings.firstName(), text: $estimateModel.firstName)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                TextField(TokenizedStrings.lastName(), text: $estimateModel.lastName)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
             }
         }
     }
 }
 
-struct EmailAddressView: View {
+struct EmailAddressInputView: View {
     @EnvironmentObject var estimateModel: EstimateModel
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(LocalizedStrings.emailAddress() + " *").bold()
-            TextField(LocalizedStrings.emailAddress(), text: $estimateModel.emailAddress)
+            Text(TokenizedStrings.emailAddress() + " *").bold()
+            TextField(TokenizedStrings.emailAddress(), text: $estimateModel.emailAddress)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
         }
     }
 }
 
-struct ProjectDetailsView: View {
+struct PhoneNumberInputView: View {
+    @EnvironmentObject var estimateModel: EstimateModel
+    @State private var validatedPhoneNumber = ""
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text(TokenizedStrings.phoneNumber() + " *").bold()
+            TextField("###-###-####", text: $estimateModel.phoneNumber)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .onChange(of: estimateModel.phoneNumber, perform: { newValue in
+                    self.validateInput(newValue)
+                })
+        }
+    }
+    
+    private func validateInput(_ newValue: String) {
+        if newValue.isEmpty {
+            // Valid case: new value is empty
+            self.validatedPhoneNumber = newValue
+            return
+        }
+        
+        if !CharacterSet(charactersIn: "0123456789-").isSuperset(of: CharacterSet(charactersIn: newValue)) {
+            // Invalid case: new value contains non-numeric characters
+            self.revertToLastValidValue()
+            return
+        }
+        
+        if newValue.count > 12 {
+            // Invalid case: more than 12 characters
+            self.revertToLastValidValue()
+            return
+        }
+        
+        if newValue.count > self.validatedPhoneNumber.count && (newValue.count == 3 || newValue.count == 7) {
+            // If the user is adding characters, automatically append hyphens.
+            // (But not if the user is deleting characters!)
+            self.validatedPhoneNumber = "\(newValue)-"
+            self.estimateModel.phoneNumber = self.validatedPhoneNumber
+            return
+        }
+        
+        // Valid case: new value passed all checks
+        self.validatedPhoneNumber = newValue
+    }
+    
+    private func revertToLastValidValue() {
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+        self.estimateModel.phoneNumber = self.validatedPhoneNumber
+    }
+}
+
+struct ProjectDetailsInputView: View {
     @EnvironmentObject var estimateModel: EstimateModel
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(LocalizedStrings.projectDetails() + " *").bold()
-            Text(LocalizedStrings.projectDetailsDescription()).font(.caption)
-            TextField(LocalizedStrings.projectDetails(), text: $estimateModel.projectDetails)
+            Text(TokenizedStrings.projectDetails() + " *").bold()
+            Text(TokenizedStrings.projectDetailsDescription()).font(.caption)
+            TextEditor(text: $estimateModel.projectDetails)
+                .frame(height: 120)
+                .padding(EdgeInsets(top: 0, leading: 4, bottom: 0, trailing: 4))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 5).stroke(Color(UIColor.systemFill), lineWidth: 0.75)
+                )
         }
-    }
-}
-
-struct AboutUsView: View {
-    var body: some View {
-        ScrollView(.vertical) {
-            Text("About Us").font(.title).padding()
-            Spacer()
-        }.tabItem({
-            Image(systemName: "info.circle")
-            Text("About Us")
-        }).tag(ContentSection.AboutUs.rawValue)
     }
 }
 
@@ -257,27 +329,27 @@ struct ContactUsView: View {
     var body: some View {
         ScrollView(.vertical) {
             Group {
-                Text(LocalizedStrings.contactUs()).font(.title).padding()
-                Text(LocalizedStrings.officeHours()).bold().padding()
-                Text(LocalizedStrings.officeHoursFirstLine())
-                Text(LocalizedStrings.officeHoursSecondLine())
+                Text(TokenizedStrings.contactUs()).font(.title).padding()
+                Text(TokenizedStrings.officeHours()).bold().padding()
+                Text(TokenizedStrings.officeHoursFirstLine())
+                Text(TokenizedStrings.officeHoursSecondLine())
             }
             Group {
-                Text(LocalizedStrings.location()).bold().padding()
-                Text(LocalizedStrings.addressFirstLine())
-                Text(LocalizedStrings.addressSecondLine())
+                Text(TokenizedStrings.location()).bold().padding()
+                Text(Constants.wellsAddressFirstLine)
+                Text(Constants.wellsAddressSecondLine)
             }
             Group {
-                Text(LocalizedStrings.contact()).bold().padding()
+                Text(TokenizedStrings.contact()).bold().padding()
                 EmailButton()
                 PhoneNumberButton(font: .body).padding()
             }
         }
         .tabItem({
             Image(systemName: "envelope")
-            Text(LocalizedStrings.contactUs())
+            Text(TokenizedStrings.contactUs())
         })
-        .tag(ContentSection.ContactUs.rawValue)
+        .tag(Tab.contactUs)
     }
 }
 
@@ -297,10 +369,8 @@ struct MapView: UIViewRepresentable {
     }
 }
 
-#if DEBUG
 struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
-#endif
